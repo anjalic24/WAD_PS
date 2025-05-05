@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Amit Sharma",
+    "designation": "Software Engineer",
+    "department": "Development",
+    "salary": 75000,
+    "image": "xyz"
+  },
+  {
+    "name": "Priya Singh",
+    "designation": "UI/UX Designer",
+    "department": "Design",
+    "salary": 68000,
+    "image": "xyz"
+  },
+  {
+    "name": "Rahul Mehta",
+    "designation": "Project Manager",
+    "department": "Management",
+    "salary": 90000,
+    "image": "xyz"
+  }
+]

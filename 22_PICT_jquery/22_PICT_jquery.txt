@@ -1,0 +1,228 @@
+-----HTML----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PICT Mobile Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Custom Professional Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- About Us Page -->
+<div data-role="page" id="about" data-theme="a">
+  <div data-role="header" data-position="fixed">
+    <h1>PICT</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade" class="ui-btn-active">About Us</a></li>
+        <li><a href="#courses" data-transition="fade">Courses</a></li>
+        <li><a href="#departments" data-transition="fade">Departments</a></li>
+        <li><a href="#contact" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>About Pune Institute of Computer Technology</h2>
+    <p>
+      <strong>Pune Institute of Computer Technology (PICT)</strong> is a premier engineering institution located in Pune, Maharashtra. Established in 1983, PICT is recognized for its academic excellence, cutting-edge research, and vibrant campus community.
+    </p>
+    <p>
+      With a focus on innovation and industry collaboration, PICT empowers students to become leaders in computer engineering, IT, and electronics.
+    </p>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+<!-- Courses Offered Page -->
+<div data-role="page" id="courses" data-theme="a">
+  <div data-role="header" data-position="fixed">
+    <h1>Courses Offered</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade" data-direction="reverse">About Us</a></li>
+        <li><a href="#courses" data-transition="fade" class="ui-btn-active">Courses</a></li>
+        <li><a href="#departments" data-transition="fade">Departments</a></li>
+        <li><a href="#contact" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>Our Academic Programs</h2>
+    <div data-role="collapsibleset" data-theme="c" data-content-theme="d">
+      <div data-role="collapsible">
+        <h3>Bachelor of Engineering (B.E.)</h3>
+        <p>Undergraduate degrees in Computer Engineering, Information Technology, and Electronics & Telecommunication Engineering.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Master of Engineering (M.E.)</h3>
+        <p>Postgraduate programs in Computer Engineering and Electronics & Telecommunication Engineering.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Doctoral (Ph.D.) Programs</h3>
+        <p>Research opportunities in select engineering disciplines, fostering innovation and advanced study.</p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+<!-- Departments Page -->
+<div data-role="page" id="departments" data-theme="a">
+  <div data-role="header" data-position="fixed">
+    <h1>Departments</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade" data-direction="reverse">About Us</a></li>
+        <li><a href="#courses" data-transition="fade" data-direction="reverse">Courses</a></li>
+        <li><a href="#departments" data-transition="fade" class="ui-btn-active">Departments</a></li>
+        <li><a href="#contact" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>Academic Departments</h2>
+    <div data-role="collapsibleset" data-theme="b" data-content-theme="c">
+      <div data-role="collapsible">
+        <h3>Computer Engineering</h3>
+        <p>Specializing in software engineering, systems, and computer architecture.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Information Technology</h3>
+        <p>Focusing on IT infrastructure, software development, and data science.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Electronics & Telecommunication</h3>
+        <p>Covering communication systems, embedded electronics, and signal processing.</p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+<!-- Contact Information Page -->
+<div data-role="page" id="contact" data-theme="a">
+  <div data-role="header" data-position="fixed">
+    <h1>Contact Us</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade" data-direction="reverse">About Us</a></li>
+        <li><a href="#courses" data-transition="fade" data-direction="reverse">Courses</a></li>
+        <li><a href="#departments" data-transition="fade" data-direction="reverse">Departments</a></li>
+        <li><a href="#contact" data-transition="fade" class="ui-btn-active">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>Contact Information</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><strong>Address:</strong> Survey No. 27, Dhankawadi, Pune - 411043, Maharashtra, India</li>
+      <li><strong>Phone:</strong> +91-20-24371101</li>
+      <li><strong>Email:</strong> <a href="mailto:pict@pict.edu">pict@pict.edu</a></li>
+      <li><strong>Website:</strong> <a href="https://www.pict.edu" target="_blank">www.pict.edu</a></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+----CSS----
+/* Use Arial as primary font with common fallbacks */
+body, .ui-content, .ui-header, .ui-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Headers and footers */
+.ui-header, .ui-footer {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border: none;
+}
+
+.ui-header h1, .ui-footer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+/* Navbar links */
+.ui-navbar ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1565c0 !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  margin: 0 2px;
+  font-weight: 700;
+  transition: background 0.3s;
+  border: 1px solid #1565c0 !important;
+}
+
+.ui-navbar ul li .ui-btn-active {
+  background: #1565c0 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(21,101,192,0.08);
+}
+
+/* Collapsible headings */
+.ui-collapsible-heading-toggle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+  background: #1565c0 !important;
+  border-radius: 6px !important;
+}
+
+/* Collapsible content */
+.ui-collapsible-content {
+  background: #fff !important;
+  color: #111 !important;
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
+}
+
+/* Headings and text */
+h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1565c0;
+  font-weight: 700;
+}
+
+p, li, strong, a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111 !important;
+  font-size: 1.04em;
+}
+
+/* Listview styling */
+ul[data-role="listview"] > li {
+  background: #fff !important;
+  border-radius: 6px !important;
+  margin-bottom: 6px;
+  border: 1px solid #1565c0 !important;
+}
+
+/* Smooth page transitions */
+.ui-page {
+  transition: opacity 0.4s ease-in-out !important;
+}

@@ -1,0 +1,185 @@
+----HTML----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PICT B.E. Course Structure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Custom Styles for clarity and professionalism -->
+  <style>
+    body, .ui-content, .ui-header, .ui-footer {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+    .ui-header, .ui-footer {
+      background: #1565c0 !important;
+      color: #fff !important;
+      border: none;
+    }
+    .ui-header h1, .ui-footer h1 {
+      font-weight: 700;
+      font-size: 1.2em;
+      color: #fff;
+    }
+    h2 {
+      color: #1565c0;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .subject-list {
+      margin-left: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .subject-list li {
+      margin-bottom: 10px;
+      padding: 8px 10px;
+      background: #f4f8fb;
+      border-left: 4px solid #1565c0;
+      border-radius: 4px;
+    }
+    .subject-title {
+      font-weight: bold;
+      color: #1565c0;
+    }
+    .subject-desc {
+      margin-left: 0;
+      color: #222;
+      font-size: 0.98em;
+    }
+  </style>
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="main">
+  <div data-role="header" data-position="fixed">
+    <h1>PICT B.E. Course Structure</h1>
+  </div>
+  <div data-role="content">
+    <h2>Bachelor of Engineering (B.E.)</h2>
+    <div data-role="collapsibleset">
+
+      <!-- First Year Engineering (FE) -->
+      <div data-role="collapsible">
+        <h3>First Year (FE)</h3>
+        <ul class="subject-list">
+          <li>
+            <span class="subject-title">Engineering Mathematics-I</span>
+            <div class="subject-desc">Fundamentals of calculus, linear algebra, and differential equations for engineers.</div>
+          </li>
+          <li>
+            <span class="subject-title">Engineering Physics</span>
+            <div class="subject-desc">Concepts of mechanics, optics, and modern physics relevant to engineering.</div>
+          </li>
+          <li>
+            <span class="subject-title">Engineering Chemistry</span>
+            <div class="subject-desc">Chemical principles, materials science, and their engineering applications.</div>
+          </li>
+          <li>
+            <span class="subject-title">Basic Electrical Engineering</span>
+            <div class="subject-desc">Introduction to electrical circuits, machines, and basic electronics.</div>
+          </li>
+          <li>
+            <span class="subject-title">Programming in C</span>
+            <div class="subject-desc">Core programming concepts and problem-solving using the C language.</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Second Year Engineering (SE) -->
+      <div data-role="collapsible">
+        <h3>Second Year (SE)</h3>
+        <ul class="subject-list">
+          <li>
+            <span class="subject-title">Data Structures & Algorithms</span>
+            <div class="subject-desc">Study of data organization, searching, sorting, and algorithmic problem-solving.</div>
+          </li>
+          <li>
+            <span class="subject-title">Object Oriented Programming</span>
+            <div class="subject-desc">Principles of OOP, encapsulation, inheritance, and polymorphism (C++/Java).</div>
+          </li>
+          <li>
+            <span class="subject-title">Digital Logic Design</span>
+            <div class="subject-desc">Design and analysis of digital circuits, logic gates, and sequential circuits.</div>
+          </li>
+          <li>
+            <span class="subject-title">Discrete Mathematics</span>
+            <div class="subject-desc">Logic, sets, relations, graphs, combinatorics, and their applications in computing.</div>
+          </li>
+          <li>
+            <span class="subject-title">Computer Organization</span>
+            <div class="subject-desc">Architecture of computers, memory, CPU, and input/output systems.</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Third Year Engineering (TE) -->
+      <div data-role="collapsible">
+        <h3>Third Year (TE)</h3>
+        <ul class="subject-list">
+          <li>
+            <span class="subject-title">Database Management Systems</span>
+            <div class="subject-desc">Database models, SQL, normalization, transactions, and database design.</div>
+          </li>
+          <li>
+            <span class="subject-title">Operating Systems</span>
+            <div class="subject-desc">Concepts of process management, memory management, and file systems.</div>
+          </li>
+          <li>
+            <span class="subject-title">Computer Networks</span>
+            <div class="subject-desc">Networking fundamentals, protocols, OSI model, and network security basics.</div>
+          </li>
+          <li>
+            <span class="subject-title">Theory of Computation</span>
+            <div class="subject-desc">Automata, formal languages, Turing machines, and computability theory.</div>
+          </li>
+          <li>
+            <span class="subject-title">Software Engineering</span>
+            <div class="subject-desc">Software development life cycle, methodologies, and project management.</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Final Year Engineering (BE) -->
+      <div data-role="collapsible">
+        <h3>Final Year (BE)</h3>
+        <ul class="subject-list">
+          <li>
+            <span class="subject-title">Machine Learning</span>
+            <div class="subject-desc">Introduction to machine learning algorithms, supervised and unsupervised learning.</div>
+          </li>
+          <li>
+            <span class="subject-title">Cloud Computing</span>
+            <div class="subject-desc">Cloud models, virtualization, distributed systems, and cloud security.</div>
+          </li>
+          <li>
+            <span class="subject-title">Information & Cyber Security</span>
+            <div class="subject-desc">Principles of security, cryptography, network security, and ethical hacking.</div>
+          </li>
+          <li>
+            <span class="subject-title">Elective Subjects</span>
+            <div class="subject-desc">Advanced topics such as AI, IoT, Data Science, as per student interest.</div>
+          </li>
+          <li>
+            <span class="subject-title">Project Work</span>
+            <div class="subject-desc">Capstone project involving real-world problem solving and application development.</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2025 PICT</h1>
+  </div>
+</div>
+
+</body>
+</html>

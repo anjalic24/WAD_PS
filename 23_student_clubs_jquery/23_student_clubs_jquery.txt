@@ -1,0 +1,180 @@
+----HTML-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PICT Student Clubs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="custom.css">
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home">
+  <div data-role="header" data-position="fixed">
+    <h1>PICT Student Clubs</h1>
+  </div>
+  <div data-role="content">
+    <h2>Clubs & Activities</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#codingclub" data-transition="fade">Coding Club</a></li>
+      <li><a href="#roboticsclub" data-transition="fade">Robotics Club</a></li>
+      <li><a href="#danceclub" data-transition="fade">Dance Club</a></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+<!-- Coding Club Page -->
+<div data-role="page" id="codingclub">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>Coding Club</h1>
+  </div>
+  <div data-role="content">
+    <h2>Coding Club</h2>
+    <img src="coding_club.jpg" alt="Coding Club" class="club-img">
+    <p>
+      <strong>Description:</strong> The Coding Club fosters a culture of programming, problem-solving, and innovation. Members participate in coding competitions, hackathons, and workshops.
+    </p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Achievements</h3>
+      <ul>
+        <li>Winners of CodeSprint 2024</li>
+        <li>Top 10 in ACM ICPC Regional 2023</li>
+        <li>Organized annual PICT Hackathon</li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+<!-- Robotics Club Page -->
+<div data-role="page" id="roboticsclub">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>Robotics Club</h1>
+  </div>
+  <div data-role="content">
+    <h2>Robotics Club</h2>
+    <img src="robotics_club.jpg" alt="Robotics Club" class="club-img">
+    <p>
+      <strong>Description:</strong> The Robotics Club encourages students to design, build, and program robots. The club regularly participates in national and international robotics competitions.
+    </p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Achievements</h3>
+      <ul>
+        <li>Winners of Robocon India 2024</li>
+        <li>Represented India at the International Robotics Challenge</li>
+        <li>Hosted annual RoboFest at PICT</li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+<!-- Dance Club Page -->
+<div data-role="page" id="danceclub">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>Dance Club</h1>
+  </div>
+  <div data-role="content">
+    <h2>Dance Club</h2>
+    <img src="dance_club.jpg" alt="Dance Club" class="club-img">
+    <p>
+      <strong>Description:</strong> The Dance Club brings together students passionate about dance. The club performs at college events and participates in intercollegiate cultural festivals.
+    </p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Achievements</h3>
+      <ul>
+        <li>Winners of Pune University Youth Festival 2024</li>
+        <li>Performed at Mood Indigo, IIT Bombay</li>
+        <li>Organized annual PICT Dance Night</li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>PICT &copy; 2025</h1>
+  </div>
+</div>
+
+</body>
+</html>
+
+-----CSS------
+body, .ui-content, .ui-header, .ui-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.ui-header, .ui-footer {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border: none;
+}
+
+.ui-header h1, .ui-footer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+h2, h3 {
+  color: #1565c0;
+  font-weight: 700;
+}
+
+p, li, strong, a {
+  color: #111 !important;
+  font-size: 1.04em;
+}
+
+ul[data-role="listview"] > li {
+  background: #fff !important;
+  border-radius: 6px !important;
+  margin-bottom: 6px;
+  border: 1px solid #1565c0 !important;
+}
+
+.ui-collapsible-heading-toggle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+  background: #1565c0 !important;
+  border-radius: 6px !important;
+}
+
+.ui-collapsible-content {
+  background: #fff !important;
+  color: #111 !important;
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
+}
+
+.club-img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 12px auto 18px auto;
+  border-radius: 10px;
+  border: 2px solid #1565c0;
+}
+
+/* Smooth transitions for page content */
+.ui-page {
+  transition: opacity 0.4s ease-in-out !important;
+}

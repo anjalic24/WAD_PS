@@ -1,0 +1,200 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, p {
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d35400; /* Deep orange for visibility */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2c3e50; /* Darker shade for section titles */
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d35400; /* Strong color for emphasis */
+}
+
+p {
+  font-size: 1rem;
+  color: #555; /* Darker gray text for better readability */
+}
+
+/* Navigation Bar */
+.navbar {
+  background: #34495e; /* Darker background for better contrast */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f1c40f; /* Bright yellow for the logo */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ecf0f1; /* Lighter text color for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Header Section */
+header {
+  background: #f1c40f;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 1.25rem;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section:nth-of-type(odd) {
+  background: #f9f5f0; /* Light background for odd sections */
+}
+
+.section:nth-of-type(even) {
+  background: #ffffff; /* White background for even sections */
+}
+
+/* Specialties Section */
+.highlight-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.popular-dishes, .cuisines {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #d35400; /* Added border for distinction */
+}
+
+.popular-dishes h3, .cuisines h3 {
+  font-size: 1.25rem;
+  color: #d35400; /* Deep orange for section headings */
+  margin-bottom: 15px;
+}
+
+.popular-dishes li, .cuisines li {
+  margin-bottom: 10px;
+  color: #555; /* Dark gray text for readability */
+}
+
+/* Dishes Table */
+.menu-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.menu-table th, .menu-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-table th {
+  background: #d35400; /* Deep orange for table headers */
+  color: #fff;
+}
+
+.dish-name {
+  font-weight: bold;
+  color: #d35400;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #34495e; /* Dark footer background */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #f1c40f; /* Bright yellow for footer headings */
+}
+
+footer .copyright {
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #bbb; /* Lighter gray text for copyright */
+  border-top: 1px solid #555;
+}
+

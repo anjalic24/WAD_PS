@@ -1,0 +1,64 @@
+body, .ui-content, .ui-header, .ui-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.ui-header, .ui-footer {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border: none;
+}
+
+.ui-header h1, .ui-footer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+h2, h3 {
+  color: #1565c0;
+  font-weight: 700;
+}
+
+p, li, strong, a {
+  color: #111 !important;
+  font-size: 1.04em;
+}
+
+ul[data-role="listview"] > li {
+  background: #fff !important;
+  border-radius: 6px !important;
+  margin-bottom: 6px;
+  border: 1px solid #1565c0 !important;
+}
+
+.ui-collapsible-heading-toggle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+  background: #1565c0 !important;
+  border-radius: 6px !important;
+}
+
+.ui-collapsible-content {
+  background: #fff !important;
+  color: #111 !important;
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
+}
+
+.club-img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 12px auto 18px auto;
+  border-radius: 10px;
+  border: 2px solid #1565c0;
+}
+
+/* Smooth transitions for page content */
+.ui-page {
+  transition: opacity 0.4s ease-in-out !important;
+}

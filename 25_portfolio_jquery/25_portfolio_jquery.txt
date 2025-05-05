@@ -1,0 +1,206 @@
+----HTML----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- About Me Page -->
+<div data-role="page" id="about">
+  <div data-role="header" data-position="fixed">
+    <h1>My Portfolio</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" class="ui-btn-active" data-transition="fade">About Me</a></li>
+        <li><a href="#projects" data-transition="fade">Projects</a></li>
+        <li><a href="#skills" data-transition="fade">Skills</a></li>
+        <li><a href="#contact" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content" class="centered">
+    <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+    <h2>Hi, I'm ABC</h2>
+    <p>I'm a passionate frontend developer focused on building intuitive, user-friendly interfaces and seamless web experiences. I love turning ideas into reality using code.</p>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2025 ABC</h1>
+  </div>
+</div>
+
+<!-- Projects Page -->
+<div data-role="page" id="projects">
+  <div data-role="header" data-position="fixed">
+    <h1>Projects</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade">About Me</a></li>
+        <li><a href="#projects" class="ui-btn-active" data-transition="fade">Projects</a></li>
+        <li><a href="#skills" data-transition="fade">Skills</a></li>
+        <li><a href="#contact" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>My Projects</h2>
+    <div data-role="collapsibleset">
+      <div data-role="collapsible">
+        <h3>Business Website</h3>
+        <p>A responsive landing page for small businesses using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Dashboard</h3>
+        <p>Data visualization dashboard with interactive charts and filters using Chart.js and vanilla JS.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Portfolio Gallery</h3>
+        <p>Personal portfolio gallery site with image lightbox and smooth transitions.</p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2025 ABC</h1>
+  </div>
+</div>
+
+<!-- Skills Page -->
+<div data-role="page" id="skills">
+  <div data-role="header" data-position="fixed">
+    <h1>Skills</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade">About Me</a></li>
+        <li><a href="#projects" data-transition="fade">Projects</a></li>
+        <li><a href="#skills" class="ui-btn-active" data-transition="fade">Skills</a></li>
+        <li><a href="#contact" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>Skills</h2>
+    <ul data-role="listview" data-inset="true">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Teamwork</li>
+      <li>Responsive Design</li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2025 ABC</h1>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div data-role="page" id="contact">
+  <div data-role="header" data-position="fixed">
+    <h1>Contact</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#about" data-transition="fade">About Me</a></li>
+        <li><a href="#projects" data-transition="fade">Projects</a></li>
+        <li><a href="#skills" data-transition="fade">Skills</a></li>
+        <li><a href="#contact" class="ui-btn-active" data-transition="fade">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div data-role="content">
+    <h2>Contact Info</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><strong>Email:</strong> abc@email.com</li>
+      <li><strong>Phone:</strong> +91 9876543210</li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abc" target="_blank">linkedin.com/in/abc</a></li>
+      <li><strong>Location:</strong> Pune, India</li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2025 ABC</h1>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+-----CSS-----
+body, .ui-content, .ui-header, .ui-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.ui-header, .ui-footer {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border: none;
+}
+
+.ui-header h1, .ui-footer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.centered {
+  text-align: center;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 18px auto 8px auto;
+  display: block;
+  border: 3px solid #1565c0;
+  box-shadow: 0 2px 8px rgba(21,101,192,0.10);
+}
+
+h2 {
+  color: #1565c0;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+p, li, strong, a {
+  color: #111 !important;
+  font-size: 1.04em;
+}
+
+ul[data-role="listview"] > li {
+  background: #fff !important;
+  border-radius: 6px !important;
+  margin-bottom: 6px;
+  border: 1px solid #1565c0 !important;
+}
+
+.ui-collapsible-heading-toggle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+  background: #1565c0 !important;
+  border-radius: 6px !important;
+}
+
+.ui-collapsible-content {
+  background: #fff !important;
+  color: #111 !important;
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
+}
+
+.ui-page {
+  transition: opacity 0.4s ease-in-out !important;
+}

@@ -1,0 +1,70 @@
+body, .ui-content, .ui-header, .ui-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.ui-header, .ui-footer {
+  background: #1565c0 !important;
+  color: #fff !important;
+  border: none;
+}
+
+.ui-header h1, .ui-footer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.centered {
+  text-align: center;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 18px auto 8px auto;
+  display: block;
+  border: 3px solid #1565c0;
+  box-shadow: 0 2px 8px rgba(21,101,192,0.10);
+}
+
+h2 {
+  color: #1565c0;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+p, li, strong, a {
+  color: #111 !important;
+  font-size: 1.04em;
+}
+
+ul[data-role="listview"] > li {
+  background: #fff !important;
+  border-radius: 6px !important;
+  margin-bottom: 6px;
+  border: 1px solid #1565c0 !important;
+}
+
+.ui-collapsible-heading-toggle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+  background: #1565c0 !important;
+  border-radius: 6px !important;
+}
+
+.ui-collapsible-content {
+  background: #fff !important;
+  color: #111 !important;
+  border-radius: 0 0 6px 6px !important;
+  border-top: none !important;
+}
+
+.ui-page {
+  transition: opacity 0.4s ease-in-out !important;
+}

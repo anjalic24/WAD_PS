@@ -1,0 +1,111 @@
+---EMPLOYEES.json-----
+[
+  {
+    "name": "Amit Sharma",
+    "designation": "Software Engineer",
+    "department": "Development",
+    "salary": 75000,
+    "image": "xyz"
+  },
+  {
+    "name": "Priya Singh",
+    "designation": "UI/UX Designer",
+    "department": "Design",
+    "salary": 68000,
+    "image": "xyz"
+  },
+  {
+    "name": "Rahul Mehta",
+    "designation": "Project Manager",
+    "department": "Management",
+    "salary": 90000,
+    "image": "xyz"
+  }
+]
+
+-----server.js-----
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const PORT = 3000;
+
+// Serve static files from public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// API endpoint to get employee data
+app.get('/api/employees', (req, res) => {
+  fs.readFile(path.join(__dirname, 'employees.json'), 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read employee data.' });
+    }
+    res.json(JSON.parse(data));
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
+
+
+----public/index.html----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f9fa; margin: 0; padding: 0; }
+    h1 { text-align: center; color: #1565c0; }
+    .directory { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(21,101,192,0.07);
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(21,101,192,0.15); }
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid #1565c0;
+    }
+    .name { font-size: 1.2em; font-weight: bold; margin: 8px 0 4px 0; color: #222; }
+    .designation, .department { color: #1565c0; margin: 2px 0; }
+    .salary { color: #444; margin-top: 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Employee Directory</h1>
+  <div class="directory" id="directory"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+-----public/script.js-----
+fetch('/api/employees')
+  .then(res => res.json())
+  .then(employees => {
+    const directory = document.getElementById('directory');
+    directory.innerHTML = employees.map(emp => `
+      <div class="card">
+        <img src="${emp.image}" alt="${emp.name}" class="profile-img">
+        <div class="name">${emp.name}</div>
+        <div class="designation">${emp.designation}</div>
+        <div class="department">${emp.department}</div>
+        <div class="salary">₹${emp.salary.toLocaleString()}</div>
+      </div>
+    `).join('');
+  })
+  .catch(() => {
+    document.getElementById('directory').innerHTML = '<p>Failed to load employee data.</p>';
+  });

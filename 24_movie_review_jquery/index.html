@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Reviews - Mobile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- jQuery Mobile CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Main Page -->
+<div data-role="page" id="home">
+  <div data-role="header" data-position="fixed">
+    <h1>Movie Reviews</h1>
+  </div>
+  <div data-role="content">
+    <h2 class="centered">Featured Movies</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#movie1" data-transition="fade"><img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" alt="Inception">Inception</a></li>
+      <li><a href="#movie2" data-transition="fade"><img src="https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg" alt="The Godfather">The Godfather</a></li>
+      <li><a href="#movie3" data-transition="fade"><img src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SY679_.jpg" alt="Interstellar">Interstellar</a></li>
+      <li><a href="#movie4" data-transition="fade"><img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="The Dark Knight">The Dark Knight</a></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h1>&copy; 2025 Movie Reviews</h1>
+  </div>
+</div>
+
+<!-- Movie 1 -->
+<div data-role="page" id="movie1">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>Inception</h1>
+  </div>
+  <div data-role="content">
+    <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" alt="Inception" class="poster">
+    <h2>Inception</h2>
+    <p><strong>Genre:</strong> Sci-Fi, Action, Thriller</p>
+    <p><strong>Summary:</strong> A skilled thief, who enters the dreams of others to steal secrets, is given a chance at redemption if he can successfully plant an idea into someone's mind.</p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Review</h3>
+      <p>
+        Christopher Nolan's "Inception" is a visually stunning and intellectually stimulating masterpiece. The film's layered narrative and spectacular effects keep viewers engaged from start to finish. Leonardo DiCaprio delivers a gripping performance, and the film's ending is sure to spark debate. A must-watch for fans of smart, original cinema.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Movie 2 -->
+<div data-role="page" id="movie2">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>The Godfather</h1>
+  </div>
+  <div data-role="content">
+    <img src="https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg" alt="The Godfather" class="poster">
+    <h2>The Godfather</h2>
+    <p><strong>Genre:</strong> Crime, Drama</p>
+    <p><strong>Summary:</strong> The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Review</h3>
+      <p>
+        "The Godfather" is a cinematic classic that redefined the gangster genre. Marlon Brando and Al Pacino give unforgettable performances, and Francis Ford Coppola's direction is flawless. The film's storytelling, atmosphere, and character development are unmatched, making it one of the greatest movies ever made.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Movie 3 -->
+<div data-role="page" id="movie3">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>Interstellar</h1>
+  </div>
+  <div data-role="content">
+    <img src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SY679_.jpg" alt="Interstellar" class="poster">
+    <h2>Interstellar</h2>
+    <p><strong>Genre:</strong> Sci-Fi, Adventure, Drama</p>
+    <p><strong>Summary:</strong> A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival as Earth becomes uninhabitable.</p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Review</h3>
+      <p>
+        "Interstellar" is a breathtaking journey through space and time, blending hard science with emotional storytelling. Hans Zimmer's score and the film's stunning visuals create an unforgettable cinematic experience. Matthew McConaughey leads an outstanding cast in this ambitious and thought-provoking film.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Movie 4 -->
+<div data-role="page" id="movie4">
+  <div data-role="header" data-position="fixed">
+    <a href="#home" data-icon="back" data-transition="fade">Back</a>
+    <h1>The Dark Knight</h1>
+  </div>
+  <div data-role="content">
+    <img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="The Dark Knight" class="poster">
+    <h2>The Dark Knight</h2>
+    <p><strong>Genre:</strong> Action, Crime, Drama</p>
+    <p><strong>Summary:</strong> Batman faces his greatest psychological and physical tests when he confronts the Joker, a criminal mastermind who seeks to create chaos in Gotham City.</p>
+    <div data-role="collapsible" data-collapsed="false">
+      <h3>Review</h3>
+      <p>
+        "The Dark Knight" is a gripping and intense superhero film that transcends its genre. Heath Ledger's portrayal of the Joker is legendary, and the film's complex themes and thrilling action sequences make it a standout in modern cinema.
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
