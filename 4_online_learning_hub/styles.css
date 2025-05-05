@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+.center-text {
+  text-align: center;
+}
+.narrow {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Navigation */
+.navbar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Header */
+.header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 100px 20px 60px;
+}
+.header h1 {
+  font-size: 2.5rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Cards & Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.badge {
+  background: #3498db;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Benefits List */
+.benefits {
+  list-style: disc inside;
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 0;
+}
+.benefits li {
+  margin-bottom: 8px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background: #2c3e50;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: #ccc;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+hr {
+  border: 0;
+  border-style: dashed ;
+  height: 1px;
+  background: #ccc;
+  margin: 40px auto;
+  max-width: 90%;
+}

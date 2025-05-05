@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Wireless Headphones",
+    "price": 7999,
+    "desc": "Noise-cancelling over-ear headphones.",
+    "img": "https://images.unsplash.com/photo-1580894894514-32e34074f153"
+  },
+  {
+    "name": "Smartwatch",
+    "price": 12999,
+    "desc": "Fitness tracking smartwatch.",
+    "img": "https://images.unsplash.com/photo-1511732351155-ec0704b1c1f7"
+  },
+  {
+    "name": "Gaming Mouse",
+    "price": 2499,
+    "desc": "Ergonomic gaming mouse.",
+    "img": "https://images.unsplash.com/photo-1616627981832-2b3f5a6ef85d"
+  },
+  {
+    "name": "Laptop Stand",
+    "price": 1999,
+    "desc": "Adjustable aluminium stand.",
+    "img": "https://images.unsplash.com/photo-1611078489935-cc7ed5c3c9c6"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": 3499,
+    "desc": "Portable wireless speaker.",
+    "img": "https://images.unsplash.com/photo-1585386959984-a4155222ca98"
+  },
+  {
+    "name": "Mechanical Keyboard",
+    "price": 5999,
+    "desc": "RGB backlit mechanical keyboard.",
+    "img": "xyz"
+  },
+  {
+    "name": "4K Monitor",
+    "price": 27999,
+    "desc": "Ultra HD 27-inch monitor.",
+    "img": "xyz"
+  },
+  {
+    "name": "USB-C Hub",
+    "price": 1499,
+    "desc": "7-in-1 USB-C hub adapter.",
+    "img": "xyz"
+  },
+  {
+    "name": "Webcam",
+    "price": 2999,
+    "desc": "Full HD 1080p webcam.",
+    "img": "xyz"
+  },
+  {
+    "name": "External SSD",
+    "price": 7499,
+    "desc": "1TB portable SSD.",
+    "img": "xyz"
+  },
+  {
+    "name": "Noise Cancelling Earbuds",
+    "price": 5999,
+    "desc": "Compact true wireless earbuds.",
+    "img": "xyz"
+  },
+  {
+    "name": "Smart Light",
+    "price": 999,
+    "desc": "Color-changing smart bulb.",
+    "img": "xyz"
+  }
+]

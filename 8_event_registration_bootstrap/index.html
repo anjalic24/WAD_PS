@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg mt-5 mb-5">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title text-center mb-0">Event Registration</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="needs-validation" novalidate>
+                            <!-- Name -->
+                            <div class="form-floating mb-3">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    id="name" 
+                                    placeholder="Enter your name" 
+                                    required 
+                                    title="Please enter your full name"
+                                >
+                                <label for="name">Full Name</label>
+                                <div class="invalid-feedback">Please enter your full name.</div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-floating mb-3">
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    id="email" 
+                                    placeholder="Enter your email" 
+                                    required 
+                                    title="Enter a valid email address"
+                                >
+                                <label for="email">Email Address</label>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-floating mb-3">
+                                <input 
+                                    type="tel" 
+                                    class="form-control" 
+                                    id="phone" 
+                                    placeholder="Enter your phone number" 
+                                    pattern="[0-9]{10}" 
+                                    required 
+                                    title="Enter a 10-digit phone number"
+                                >
+                                <label for="phone">Phone Number</label>
+                                <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                            </div>
+
+                            <!-- Event Selection -->
+                            <div class="form-floating mb-3">
+                                <select 
+                                    class="form-select" 
+                                    id="eventType" 
+                                    required 
+                                    title="Select the event you wish to attend"
+                                >
+                                    <option value="" selected disabled>Select an event</option>
+                                    <option value="conference">Annual Tech Conference</option>
+                                    <option value="workshop">Web Development Workshop</option>
+                                    <option value="seminar">Leadership Seminar</option>
+                                    <option value="networking">Networking Mixer</option>
+                                </select>
+                                <label for="eventType">Event Type</label>
+                                <div class="invalid-feedback">Please select an event.</div>
+                            </div>
+
+                            <!-- Date -->
+                            <div class="form-floating mb-3">
+                                <input 
+                                    type="date" 
+                                    class="form-control" 
+                                    id="date" 
+                                    required 
+                                    title="Select your preferred date"
+                                >
+                                <label for="date">Preferred Date</label>
+                                <div class="invalid-feedback">Please select a date.</div>
+                            </div>
+
+                            <!-- Dietary Restrictions -->
+                            <div class="form-floating mb-3">
+                                <textarea 
+                                    class="form-control" 
+                                    id="dietary" 
+                                    placeholder="Enter any dietary restrictions" 
+                                    style="height: 100px"
+                                    title="Let us know about any dietary needs"
+                                ></textarea>
+                                <label for="dietary">Dietary Restrictions (if any)</label>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input 
+                                        class="form-check-input" 
+                                        type="checkbox" 
+                                        id="terms" 
+                                        required 
+                                        title="You must agree to the terms and conditions"
+                                    >
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#">terms and conditions</a>
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        You must agree to the terms and conditions.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary btn-lg" type="submit">Register Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (only needed for tooltips, but not required for validation) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Bootstrap validation (no custom JS required, this is Bootstrap's recommended snippet)
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Product Catalog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product</th>
+          <th>Price (INR ₹)</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody id="productBody">
+        <!-- Products injected here via JS -->
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button id="prevBtn">Previous</button>
+      <span id="pageInfo">Page 1 of 1</span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

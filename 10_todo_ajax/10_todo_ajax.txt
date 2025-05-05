@@ -1,0 +1,193 @@
+----HTML----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>To-Do List</h2>
+    <label for="task">Enter Task:</label>
+    <input type="text" id="task" placeholder="Enter new task" />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+----CSS----
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  flex-grow: 1;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.task-buttons button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: black;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+-----JS-----
+// Initialize with 2 tasks if none exist
+function initializeTasks() {
+  if (!localStorage.getItem("tasks")) {
+    const defaultTasks = [
+      { name: "Complete project report" },
+      { name: "Study for upcoming exam" }
+    ];
+    localStorage.setItem("tasks", JSON.stringify(defaultTasks));
+  }
+}
+
+// Load and render tasks
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
+
+  tasks.forEach((task, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${task.name}</span>
+      <div class="task-buttons">
+        <button class="edit-btn" onclick="editTask(${index})">Edit</button>
+        <button class="delete-btn" onclick="deleteTask(${index})">Delete</button>
+      </div>
+    `;
+    taskList.appendChild(li);
+  });
+}
+
+// Add a task
+function addTask() {
+  const taskInput = document.getElementById("task");
+  const taskName = taskInput.value.trim();
+  if (taskName === "") return alert("Please enter a task.");
+
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  tasks.push({ name: taskName });
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  taskInput.value = "";
+  loadTasks();
+}
+
+// Edit task
+function editTask(index) {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const newName = prompt("Edit Task:", tasks[index].name);
+  if (newName && newName.trim() !== "") {
+    tasks[index].name = newName.trim();
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    loadTasks();
+  }
+}
+
+// Delete task
+function deleteTask(index) {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  tasks.splice(index, 1);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  loadTasks();
+}
+
+// Initial load
+initializeTasks();
+loadTasks();

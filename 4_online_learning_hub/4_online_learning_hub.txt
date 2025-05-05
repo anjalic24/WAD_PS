@@ -1,0 +1,273 @@
+---HTML----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Learning Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Online Learning Hub</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#learning-paths">Paths</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#courses">Courses</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header">
+    <div class="container center-text">
+      <h1>Online Learning Hub</h1>
+      <p class="tagline">Expand Your Knowledge, Anytime, Anywhere</p>
+    </div>
+  </header>
+  <hr>
+
+  <section id="about" class="section center-text">
+    <div class="container narrow">
+      <h2>Welcome</h2>
+      <p>Access quality education anywhere. Learn flexibly, affordably, and practically from global experts.</p>
+      <ul class="benefits">
+        <li>Self-paced learning</li>
+        <li>Expert-led courses</li>
+        <li>Affordable pricing</li>
+        <li>Hands-on projects</li>
+        <li>Certificates for career boost</li>
+      </ul>
+    </div>
+  </section>
+  <hr>
+
+  <section id="learning-paths" class="section paths">
+    <div class="container">
+      <h2>Learning Paths</h2>
+      <div class="grid cards">
+        <div class="card">
+          <div class="badge">1</div>
+          <h3>Beginner</h3>
+          <p>Start from scratch with guided basics.</p>
+        </div>
+        <div class="card">
+          <div class="badge">2</div>
+          <h3>Intermediate</h3>
+          <p>Enhance your skills with real-world challenges.</p>
+        </div>
+        <div class="card">
+          <div class="badge">3</div>
+          <h3>Advanced</h3>
+          <p>Master complex topics and specialize.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <section id="categories" class="section">
+    <div class="container">
+      <h2>Categories</h2>
+      <div class="grid cards">
+        <div class="card center-text">
+          <div class="icon">🤖</div>
+          <h3>AI & ML</h3>
+          <p>Explore AI models and neural networks.</p>
+        </div>
+        <div class="card center-text">
+          <div class="icon">📊</div>
+          <h3>Data Science</h3>
+          <p>Analyze data and visualize insights.</p>
+        </div>
+        <div class="card center-text">
+          <div class="icon">💻</div>
+          <h3>Web Dev</h3>
+          <p>Build responsive sites and apps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <section id="courses" class="section">
+    <div class="container">
+      <h2>Courses</h2>
+      <table>
+        <thead>
+          <tr><th>Course</th><th>Instructor</th><th>Duration</th><th>Fee</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Intro to Python</td><td>Dr. Sarah Johnson</td><td>6 weeks</td><td>₹2,499</td></tr>
+          <tr><td>ML Fundamentals</td><td>Prof. Rajesh Kumar</td><td>8 weeks</td><td>₹4,999</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <hr>
+
+  <footer class="footer">
+    <div class="container center-text">
+      <p>Contact: info@onlinelearninghub.com | +91 9876543210</p>
+      <p>&copy; 2023 Online Learning Hub</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+---CSS---
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+.center-text {
+  text-align: center;
+}
+.narrow {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Navigation */
+.navbar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Header */
+.header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 100px 20px 60px;
+}
+.header h1 {
+  font-size: 2.5rem;
+}
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Cards & Grid */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.badge {
+  background: #3498db;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Benefits List */
+.benefits {
+  list-style: disc inside;
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 0;
+}
+.benefits li {
+  margin-bottom: 8px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background: #2c3e50;
+  color: #fff;
+}
+tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: #ccc;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+hr {
+  border: 0;
+  border-style: dashed ;
+  height: 1px;
+  background: #ccc;
+  margin: 40px auto;
+  max-width: 90%;
+}

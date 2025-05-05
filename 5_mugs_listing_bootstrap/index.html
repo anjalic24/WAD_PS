@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mugs - E-commerce Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container py-4">
+    <!-- Header row -->
+    <div class="row align-items-center mb-3">
+      <div class="col-lg-6 col-md-6">
+        <h1 class="fw-bold mb-1">Mugs</h1>
+        <p class="text-muted mb-0" style="font-size: 15px;">
+          Mugs and glasses sell great as gifts for friends and loved ones on special occasions. Choose from many different sizes and styles to sell online.
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 d-flex justify-content-end mt-3 mt-md-0">
+        <div class="sort-dropdown">
+          <label for="sort" class="me-2 text-secondary fw-normal">Sort by</label>
+          <select class="form-select form-select-sm" id="sort">
+            <option selected>Popularity</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest First</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Sidebar Filters -->
+      <aside class="col-lg-3 col-md-4 mb-4">
+        <div class="filter-section mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <span class="fw-semibold">Target Market</span>
+            <span class="badge bg-light text-success border border-success ms-2" style="font-size: 12px;">New</span>
+          </div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="usa"><label class="form-check-label" for="usa">USA</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="canada"><label class="form-check-label" for="canada">Canada</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="uk"><label class="form-check-label" for="uk">United Kingdom</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="europe"><label class="form-check-label" for="europe">Europe</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="australia"><label class="form-check-label" for="australia">Australia/NZ</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="china"><label class="form-check-label" for="china">China</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="other"><label class="form-check-label" for="other">Other</label></div>
+        </div>
+        <div class="filter-section mb-4">
+          <div class="fw-semibold mb-2">Print area</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="all-areas"><label class="form-check-label" for="all-areas">All areas</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="all-over-print"><label class="form-check-label" for="all-over-print">All over print</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="front-side"><label class="form-check-label" for="front-side">Front side</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="wraparound"><label class="form-check-label" for="wraparound">Wraparound exterior</label></div>
+        </div>
+        <div class="filter-section">
+          <div class="fw-semibold mb-2">Print providers</div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="artsadd"><label class="form-check-label" for="artsadd">ArtsAdd</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="colorway"><label class="form-check-label" for="colorway">Colorway</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="district"><label class="form-check-label" for="district">District Photo</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="duplium"><label class="form-check-label" for="duplium">Duplium</label></div>
+        </div>
+      </aside>
+      <!-- Product Grid -->
+      <main class="col-lg-9 col-md-8">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+          <!-- Product 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <span class="badge bg-danger text-white position-absolute top-0 start-0 m-2">Bestseller</span>
+              <img src="https://images.printify.com/mockup/5f6c6c1d5e2a8b001f8c9b8e/37049?auto=format&fit=cover&w=400&q=80" class="card-img-top" alt="Ceramic Mug 11oz">
+              <div class="card-body p-2">
+                <div class="fw-semibold mb-1" style="font-size: 16px;">Ceramic Mug 11oz</div>
+                <div class="text-muted mb-1" style="font-size: 13px;">By Generic brand</div>
+                <div class="fw-semibold" style="font-size: 15px;">From USD 4.40</div>
+                <div class="text-success mb-1" style="font-size: 14px;">From USD 3.39 with Printify Premium</div>
+                <div class="text-muted" style="font-size: 13px;">1 size · District Photo</div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 1 -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS (optional for dropdown and functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

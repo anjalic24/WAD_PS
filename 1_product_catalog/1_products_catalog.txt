@@ -1,0 +1,258 @@
+----HTML-----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Product Catalog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product</th>
+          <th>Price (INR ₹)</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody id="productBody">
+        <!-- Products injected here via JS -->
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button id="prevBtn">Previous</button>
+      <span id="pageInfo">Page 1 of 1</span>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+-----CSS-----
+/* Color palette: shades of blue, white, and soft gray */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fa;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+th {
+  background-color: #ecf3f9;
+  color: #2c3e50;
+}
+
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+#pageInfo {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+
+-----JS-----
+const PRODUCTS_PER_PAGE = 10;
+let currentPage = 1;
+let products = [];
+
+function loadProducts() {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "products.json", true);
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      products = JSON.parse(xhr.responseText);
+      renderPage();
+    }
+  };
+  xhr.send();
+}
+
+function renderPage() {
+  const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
+  const end = start + PRODUCTS_PER_PAGE;
+  const pageItems = products.slice(start, end);
+
+  const tbody = document.getElementById("productBody");
+  tbody.innerHTML = "";
+
+  pageItems.forEach(product => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td><img src="${product.img}" alt="${product.name}"></td>
+      <td>${product.name}</td>
+      <td>₹${product.price}</td>
+      <td>${product.desc}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
+  document.getElementById("pageInfo").textContent = `Page ${currentPage} of ${totalPages}`;
+  document.getElementById("prevBtn").disabled = currentPage === 1;
+  document.getElementById("nextBtn").disabled = currentPage === totalPages;
+}
+
+document.getElementById("prevBtn").onclick = function () {
+  if (currentPage > 1) {
+    currentPage--;
+    renderPage();
+  }
+};
+
+document.getElementById("nextBtn").onclick = function () {
+  const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
+  if (currentPage < totalPages) {
+    currentPage++;
+    renderPage();
+  }
+};
+
+loadProducts();
+
+
+
+
+------JSON-----
+[
+  {
+    "name": "Wireless Headphones",
+    "price": 7999,
+    "desc": "Noise-cancelling over-ear headphones.",
+    "img": "https://images.unsplash.com/photo-1580894894514-32e34074f153"
+  },
+  {
+    "name": "Smartwatch",
+    "price": 12999,
+    "desc": "Fitness tracking smartwatch.",
+    "img": "https://images.unsplash.com/photo-1511732351155-ec0704b1c1f7"
+  },
+  {
+    "name": "Gaming Mouse",
+    "price": 2499,
+    "desc": "Ergonomic gaming mouse.",
+    "img": "https://images.unsplash.com/photo-1616627981832-2b3f5a6ef85d"
+  },
+  {
+    "name": "Laptop Stand",
+    "price": 1999,
+    "desc": "Adjustable aluminium stand.",
+    "img": "https://images.unsplash.com/photo-1611078489935-cc7ed5c3c9c6"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": 3499,
+    "desc": "Portable wireless speaker.",
+    "img": "https://images.unsplash.com/photo-1585386959984-a4155222ca98"
+  },
+  {
+    "name": "Mechanical Keyboard",
+    "price": 5999,
+    "desc": "RGB backlit mechanical keyboard.",
+    "img": "xyz"
+  },
+  {
+    "name": "4K Monitor",
+    "price": 27999,
+    "desc": "Ultra HD 27-inch monitor.",
+    "img": "xyz"
+  },
+  {
+    "name": "USB-C Hub",
+    "price": 1499,
+    "desc": "7-in-1 USB-C hub adapter.",
+    "img": "xyz"
+  },
+  {
+    "name": "Webcam",
+    "price": 2999,
+    "desc": "Full HD 1080p webcam.",
+    "img": "xyz"
+  },
+  {
+    "name": "External SSD",
+    "price": 7499,
+    "desc": "1TB portable SSD.",
+    "img": "xyz"
+  },
+  {
+    "name": "Noise Cancelling Earbuds",
+    "price": 5999,
+    "desc": "Compact true wireless earbuds.",
+    "img": "xyz"
+  },
+  {
+    "name": "Smart Light",
+    "price": 999,
+    "desc": "Color-changing smart bulb.",
+    "img": "xyz"
+  }
+]
+
+

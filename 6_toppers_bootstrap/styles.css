@@ -1,0 +1,84 @@
+/* General Styling */
+body {
+  padding-top: 80px; /* Adjust for fixed navbar */
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #003366;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body h5 {
+  font-weight: 600;
+}
+
+.card-body p {
+  font-weight: 400;
+}
+
+/* Welcome Section */
+.welcome-section {
+  padding: 120px 0; 
+  background-color: #007bff; 
+  color: white;
+}
+
+.welcome-section h1 {
+  font-size: 3.5rem; 
+  font-weight: 700;
+}
+
+.welcome-section p {
+  font-size: 1.5rem; 
+  font-weight: 400;
+}
+
+/* Achievements Section */
+#achievements {
+  background-color: #f0f8ff;
+  padding: 50px 0;
+}
+
+#achievements h2 {
+  color: #0056b3;
+}
+
+#achievements p {
+  color: #555;
+}
+
+/* Toppers Section */
+.row .card-img-top {
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Footer Section */
+footer {
+  background-color: #212529;
+  color: white;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+footer .container {
+  font-size: 1.1rem;
+}
+
+hr {
+  border-top: 2px solid #ccc;
+}

@@ -1,0 +1,89 @@
+body {
+  background: #fafbfc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+}
+
+h1 { font-size: 2rem; }
+
+.filter-section {
+  background: #fff;
+  border-radius: 6px;
+  padding: 18px 16px 10px;
+  margin-bottom: 18px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01);
+}
+
+.form-check {
+  margin-bottom: 7px;
+}
+
+.form-check-input:checked {
+  background-color: #3a7afe;
+  border-color: #3a7afe;
+}
+
+.form-check-label {
+  font-size: 15px;
+  color: #333;
+  font-weight: 400;
+}
+
+.badge-bestseller, .badge-new {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.badge-bestseller {
+  background: #fff8e1;
+  color: #b38800;
+  border: 1px solid #ffe082;
+}
+
+.badge-new {
+  background: #e0f7fa;
+  color: #00796b;
+  border: 1px solid #b2dfdb;
+}
+
+.product-card {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  min-height: 340px;
+  transition: box-shadow 0.2s;
+}
+
+.card-img-top {
+  background: #fcfcfc;
+  object-fit: contain;
+  height: 180px;
+  width: 100%;
+  border-bottom: 1px solid #f3f3f3;
+  padding: 18px 0;
+}
+
+.card-body { padding: 14px 10px 10px; }
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.form-select-sm {
+  font-size: 15px;
+  padding: 3px 30px 3px 10px;
+  border-radius: 5px;
+  min-width: 130px;
+}

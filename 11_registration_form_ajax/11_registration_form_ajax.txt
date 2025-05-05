@@ -1,0 +1,305 @@
+----LOGIN----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Login</h2>
+        
+        <div class="form-group">
+            <label for="loginUsername">Username (email)</label>
+            <input type="text" id="loginUsername" placeholder="Enter your username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+        </div>
+
+        <button onclick="login()">Login</button>
+        
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+-----REGISTER-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Register</h2>
+        
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" placeholder="Enter your mobile number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" placeholder="Enter your city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" placeholder="Enter your address" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <button onclick="register()">Register</button>
+        
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+----WELCOME-----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="welcome-container">
+    <h2>Welcome</h2>
+    <p id="welcomeMessage"></p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (loggedInUser) {
+      document.getElementById("welcomeMessage").textContent = `Welcome, ${loggedInUser.name}!`;
+    } else {
+      // If not logged in, redirect to login page
+      window.location.href = "login.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
+
+
+-----CSS-----
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 14px;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* For login and register pages, add the same styling */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.welcome-container h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.welcome-container button {
+  width: 150px;
+  padding: 10px;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.welcome-container button:hover {
+  background-color: #c82333;
+}
+
+
+----JS-----
+// Handle registration with localStorage
+function register() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const mobile = document.getElementById('mobile').value;
+  const dob = document.getElementById('dob').value;
+  const city = document.getElementById('city').value;
+  const address = document.getElementById('address').value;
+  const password = document.getElementById('password').value;
+
+  // Validate form
+  if (!name || !email || !mobile || !dob || !city || !address || !password) {
+      alert("Please fill all the fields!");
+      return;
+  }
+
+  // Check if the user already exists
+  const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+  const userExists = existingUsers.find(user => user.email.toLowerCase() === email.toLowerCase());
+  
+  if (userExists) {
+      alert("User already exists!");
+      return;
+  }
+
+  // Create a new user object
+  const newUser = { name, email, mobile, dob, city, address, password };
+
+  // Store the new user in localStorage
+  existingUsers.push(newUser);
+  localStorage.setItem("users", JSON.stringify(existingUsers));
+
+  alert("Registration successful!");
+  window.location.href = "login.html";  // Redirect to login after registration
+}
+
+// Handle login with localStorage
+function login() {
+  const username = document.getElementById('loginUsername').value.trim();
+  const password = document.getElementById('loginPassword').value;
+
+  // Validate input
+  if (!username || !password) {
+      alert("Please enter both username and password!");
+      return;
+  }
+
+  // Get the users data from localStorage
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  
+  // Find the user (case-insensitive username matching)
+  const user = users.find(user => user.email.toLowerCase() === username.toLowerCase() && user.password === password);
+
+  if (user) {
+      localStorage.setItem("loggedIn", true);
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      window.location.href = "welcome.html";  // Redirect to welcome page
+  } else {
+      alert("Invalid username or password!");
+  }
+}
